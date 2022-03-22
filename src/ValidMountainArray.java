@@ -3,6 +3,8 @@ class ValidMountainArray {
         validMountainArray(new int[]{1,2,0});
     }
     public static boolean validMountainArray(int[] arr) {
+
+        int[] expectedA = new int[4];
         
         int length = arr.length;
         
