@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -45,6 +48,13 @@ class SwapPairInLinkedList {
 
     public static void main(String[] head) {
 
+
+        int[][] triangle = new int[][] {{1},{1,1},{}} ;
+
+        int length = triangle.length;
+
+        List[] list = new List[3];
+
         ListNode listNode3 = new ListNode(4, null);
         ListNode listNode2 = new ListNode(3, listNode3);
         ListNode listNode1 = new ListNode(2, listNode2);
@@ -53,7 +63,11 @@ class SwapPairInLinkedList {
 
         ListNode listNodet = swapRecursively(listNode);
 
-        System.out.println(listNodet);
+        while(listNodet != null){
+            System.out.println(listNodet.val);
+            listNodet = listNodet.next;
+
+        }
 
     }
 }
