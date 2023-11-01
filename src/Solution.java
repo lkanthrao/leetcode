@@ -40,7 +40,7 @@ import java.util.*;
 class Solution {
 
     public static void main(String[] args) {
-        groupAnagrams(new String[]{"eat","tea","tan","ate","nat","bat"});
+        groupAnagrams(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"});
     }
 
     public static List<List<String>> groupAnagrams(String[] strs) {
@@ -62,16 +62,15 @@ class Solution {
         Map<Integer[], List<String>> histogramMap = new HashMap();
 
 
-        for(int i = 0; i< strs.length ; i++){
+        for (int i = 0; i < strs.length; i++) {
 
-            if(strs[i] == "9999999") continue;
+            if (strs[i] == "9999999") continue;
 
             Integer[] streamOfOccurance = computeCharIndexAndCount(strs[i]);
 
-            boolean flag =  compute(histogramMap, streamOfOccurance, strs[i]);
+            boolean flag = compute(histogramMap, streamOfOccurance, strs[i]);
 
-            if(flag)
-                strs[i] = "9999999";
+            if (flag) strs[i] = "9999999";
         }
 
         return new ArrayList(histogramMap.values());
@@ -82,7 +81,7 @@ class Solution {
 
         if (histogramMap.size() == 0) {
 
-            histogramMap.put(streamOfOccurance, Arrays.asList(eachElement));
+            histogramMap.put(streamOfOccurance, Collections.singletonList(eachElement));
 
             return false;
         }
@@ -121,7 +120,7 @@ class Solution {
         }
 
         if (!found) {
-            histogramMap.put(streamOfOccurance, Arrays.asList(eachElement));
+            histogramMap.put(streamOfOccurance, Collections.singletonList(eachElement));
             return false;
         }
 

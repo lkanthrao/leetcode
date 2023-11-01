@@ -8,21 +8,20 @@ public class PossibleReciepes {
         Recipe recipe = new Recipe();
         recipe.setName("Bread");
         recipe.setRawIng(Arrays.asList("wheat", "floor"));
-        recipe.setInterIng(Arrays.asList());
+        recipe.setInterIng(List.of());
 
         Recipe recipe1 = new Recipe();
         recipe1.setName("Corn");
         recipe1.setRawIng(Arrays.asList("corn", "floor"));
-        recipe1.setInterIng(Arrays.asList());
+        recipe1.setInterIng(List.of());
 
         Recipe recipe2 = new Recipe();
         recipe2.setName("Sandwich");
         recipe2.setRawIng(Arrays.asList("corn", "floor"));
-        recipe2.setInterIng(Arrays.asList("WOW"));
+        recipe2.setInterIng(List.of("WOW"));
 
 
-
-        returnPossibileReciepes(Arrays.asList(recipe, recipe1, recipe2),Arrays.asList("wheat", "floor", "corn"));
+        returnPossibileReciepes(Arrays.asList(recipe, recipe1, recipe2), Arrays.asList("wheat", "floor", "corn"));
     }
 
 
@@ -37,7 +36,10 @@ public class PossibleReciepes {
         for (Recipe eachRecipe : reciepes) {
             boolean canAdd = true;
             for (String eachIngredient : eachRecipe.getRawIng())
-                if (!ingredients.contains(eachIngredient)) canAdd = false;
+                if (!ingredients.contains(eachIngredient)) {
+                    canAdd = false;
+                    break;
+                }
 
             if (canAdd) finalReciepes.add(eachRecipe.getName());
 
@@ -48,7 +50,10 @@ public class PossibleReciepes {
                 if (finalReciepes.contains(intermediatIng)) {
                     boolean canAdd = true;
                     for (String eachIng : eachRecipe.getInterIng())
-                        if (!ingredients.contains(eachIng)) canAdd = false;
+                        if (!ingredients.contains(eachIng)) {
+                            canAdd = false;
+                            break;
+                        }
 
                     if (canAdd) finalReciepes.add(eachRecipe.getName());
 

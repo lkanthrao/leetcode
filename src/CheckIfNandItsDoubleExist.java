@@ -3,8 +3,9 @@ import java.util.HashSet;
 class CheckIfNandItsDoubleExist {
 
     public static void main(String[] args) {
-        System.out.println(checkIfExist(new int[]{1,2,7,12}));
+        System.out.println(checkIfExist(new int[]{1, 2, 7, 12}));
     }
+
     public static boolean checkIfExist(int[] arr) {
         java.util.HashSet<Integer> indexValue = new java.util.HashSet<>();
 

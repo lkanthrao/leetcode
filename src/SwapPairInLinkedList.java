@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -49,7 +48,7 @@ class SwapPairInLinkedList {
     public static void main(String[] head) {
 
 
-        int[][] triangle = new int[][] {{1},{1,1},{}} ;
+        int[][] triangle = new int[][]{{1}, {1, 1}, {}};
 
         int length = triangle.length;
 
@@ -63,7 +62,7 @@ class SwapPairInLinkedList {
 
         ListNode listNodet = swapRecursively(listNode);
 
-        while(listNodet != null){
+        while (listNodet != null) {
             System.out.println(listNodet.val);
             listNodet = listNodet.next;
 

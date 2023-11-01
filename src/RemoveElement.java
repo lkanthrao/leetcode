@@ -2,6 +2,7 @@ class RemoveElement {
     public static void main(String[] args) {
         removeElement(new int[]{1}, 1);
     }
+
     public static void removeElement(int[] nums, int val) {
 
         //  can the order be changed? yes
@@ -10,15 +11,13 @@ class RemoveElement {
 
         // [2,2,2,3], val = 3
 
-        while(startCursor < endCursor){
+        while (startCursor < endCursor) {
 
-            if(nums[startCursor] != val)
-                startCursor++;
+            if (nums[startCursor] != val) startCursor++;
 
-            else if(nums[endCursor] == val)
-                endCursor--;
+            else if (nums[endCursor] == val) endCursor--;
 
-            else{
+            else {
                 nums[startCursor] = nums[endCursor];
                 startCursor++;
                 endCursor--;

@@ -15,8 +15,7 @@ public class CalculateFactorial {
         // (factorial - 1) * ((factorial - 1) - 1) * (((factorial - 1) - 1) - 1) * ((((factorial - 1) - 1) - 1) - 1)
 
         // this will fail if factorialOf = 0 so update condition
-        if (factorialOf <= 1)
-            return 1;
+        if (factorialOf <= 1) return 1;
 
         return factorialOf * calculateFactorialOf(factorialOf - 1);
         //          5      * calculateFactorialOf(5 - 1);

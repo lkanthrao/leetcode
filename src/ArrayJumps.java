@@ -26,10 +26,8 @@ public class ArrayJumps {
         while (true) {
 
 
-            if (oddOrEven % 2 == 0)
-                nextIndex = findElement(A, S, POSITION.RIGHT);
-            else
-                nextIndex = findElement(A, S, POSITION.LEFT);
+            if (oddOrEven % 2 == 0) nextIndex = findElement(A, S, POSITION.RIGHT);
+            else nextIndex = findElement(A, S, POSITION.LEFT);
 
             if (nextIndex == -1) return result;
             else {
@@ -90,30 +88,29 @@ public class ArrayJumps {
 
 
 /**
- You are given an array A containing N integers, and a starting position S, as well as offset integer X.
-
- You need to identify the final position of a jumping game which has the following rules:
-
- In every odd round, you jump left from current position (C) to the closest position CL, such that A[CL] = A[C] + 1.
- In every even round, you jump right from current position (C) to the closest position CR, such that A[CR] = A[C] + 1.
- if there is no valid position for the next jump, stop jumping and return the position C.
- After a successful jump (odd or even), the array value at the position before the jump (C) is incremented by X, i.e. A[C] := A[C] + X. Then proceed to the next round at the new position (CL/CR).
- Write a method arrayJumps(A, S, X), which returns the position where you end after performing all suitable jumps.
-
- Examples:
-
- arrayJumps(A = [3, 2, 3, 4, 5], S = 1, X = 4) -> 3
-
- C               C                           C
- [3, 2, 3, 4, 5] -> [3, 6, 3, 4, 5] -> [7, 6, 3, 4, 5]
-
- arrayJumps(A = [1, 3, 1], S = 1, X = 2) -> 1
-
- Array A is indexed from 0 in the examples.
- Initial values in the array A are positive integers between 1 and N, where N is the length of the array A.
-
-
- arrayJumps(A = [3, 2, 3, 4, 5], S = 1, X = 4) -> 3
-
+ * You are given an array A containing N integers, and a starting position S, as well as offset integer X.
+ * <p>
+ * You need to identify the final position of a jumping game which has the following rules:
+ * <p>
+ * In every odd round, you jump left from current position (C) to the closest position CL, such that A[CL] = A[C] + 1.
+ * In every even round, you jump right from current position (C) to the closest position CR, such that A[CR] = A[C] + 1.
+ * if there is no valid position for the next jump, stop jumping and return the position C.
+ * After a successful jump (odd or even), the array value at the position before the jump (C) is incremented by X, i.e. A[C] := A[C] + X. Then proceed to the next round at the new position (CL/CR).
+ * Write a method arrayJumps(A, S, X), which returns the position where you end after performing all suitable jumps.
+ * <p>
+ * Examples:
+ * <p>
+ * arrayJumps(A = [3, 2, 3, 4, 5], S = 1, X = 4) -> 3
+ * <p>
+ * C               C                           C
+ * [3, 2, 3, 4, 5] -> [3, 6, 3, 4, 5] -> [7, 6, 3, 4, 5]
+ * <p>
+ * arrayJumps(A = [1, 3, 1], S = 1, X = 2) -> 1
+ * <p>
+ * Array A is indexed from 0 in the examples.
+ * Initial values in the array A are positive integers between 1 and N, where N is the length of the array A.
+ * <p>
+ * <p>
+ * arrayJumps(A = [3, 2, 3, 4, 5], S = 1, X = 4) -> 3
  */
 

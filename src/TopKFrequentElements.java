@@ -39,7 +39,6 @@
 */
 
 
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
@@ -49,31 +48,32 @@ class TopKFrequentElements {
     public static void main(String[] args) {
         TopKFrequentElements topKFrequentElements = new TopKFrequentElements();
 
-        topKFrequentElements.topKFrequent(new int[]{1,1,1,2,2,3, 3, 3},2);
+        topKFrequentElements.topKFrequent(new int[]{1, 1, 1, 2, 2, 3, 3, 3}, 2);
     }
+
     public int[] topKFrequent(int[] nums, int k) {
 
-        if(nums.length == 0 || k == 0 ) return new int[0];
+        if (nums.length == 0 || k == 0) return new int[0];
 
-        Map<Integer, Integer> elementOccurance  = new HashMap();
+        Map<Integer, Integer> elementOccurance = new HashMap();
 
         //Map<Integer, Integer> maxKElements = new HashMap();
 
         TreeMap<Integer, Integer> sortedMap = new TreeMap<Integer, Integer>();
 
-        for(Integer eachElement:nums){
+        for (Integer eachElement : nums) {
 
-            if(elementOccurance.get(eachElement) == null) elementOccurance.put(eachElement, 1);
+            if (elementOccurance.get(eachElement) == null) elementOccurance.put(eachElement, 1);
 
-            else{
+            else {
                 int occurance = elementOccurance.get(eachElement);
                 elementOccurance.put(eachElement, occurance + 1);
 
-                if(sortedMap.size() < k) sortedMap.put(elementOccurance.get(eachElement), eachElement);
+                if (sortedMap.size() < k) sortedMap.put(elementOccurance.get(eachElement), eachElement);
 
-                else if(sortedMap.lastEntry().getValue() < elementOccurance.get(eachElement)){
+                else if (sortedMap.lastEntry().getValue() < elementOccurance.get(eachElement)) {
 
-                   // sortedMap.pollLastEntry();
+                    // sortedMap.pollLastEntry();
 
                     sortedMap.put(elementOccurance.get(eachElement), eachElement);
                 }
@@ -83,7 +83,7 @@ class TopKFrequentElements {
         int[] num = new int[k];
 
         int count = 0;
-        for(Integer int1:sortedMap.keySet()){
+        for (Integer int1 : sortedMap.keySet()) {
             num[count++] = int1;
         }
 

@@ -61,7 +61,7 @@ class GraphDS {
         Set<Map.Entry<Integer, int[]>> entrySet = graph.entrySet();
 
         for (Map.Entry<Integer, int[]> eachNode : entrySet) {
-            System.out.println(String.format("Node %s -> %s", eachNode.getKey(), printArray(eachNode.getValue())));
+            System.out.printf("Node %s -> %s%n", eachNode.getKey(), printArray(eachNode.getValue()));
         }
     }
 

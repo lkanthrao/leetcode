@@ -10,7 +10,7 @@ public class IndexInFibonacciSeries {
         // above line prints a bug, indexOfFIbNumber is always 0. denug and see. because printf() would have eveluated the value
         // before indexOfDFibonacciNumber is eveluated. fix for the same is below.
 
-         System.out.printf("Closest match of Fib number: %d and index of match is %d %n", indexOfFibonacciNumber(6, 0, 1), indexOfFIbNumber);
+        System.out.printf("Closest match of Fib number: %d and index of match is %d %n", indexOfFibonacciNumber(6, 0, 1), indexOfFIbNumber);
     }
 
     public static int indexOfFibonacciNumber(int aNumber, int previousFib, int currentFib) {
@@ -19,8 +19,7 @@ public class IndexInFibonacciSeries {
 
         int nextFibNumber = previousFib + currentFib;
 
-        if (nextFibNumber >= aNumber)
-            return nextFibNumber;
+        if (nextFibNumber >= aNumber) return nextFibNumber;
 
         return indexOfFibonacciNumber(aNumber, currentFib, nextFibNumber);
     }

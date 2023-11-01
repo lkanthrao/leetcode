@@ -54,7 +54,7 @@ public class JDK8 {
         Consumer<Integer> integerConsumer = new Consumer<Integer>() {
             @Override
             public void accept(Integer integer) {
-                System.out.println("Consumer of type Integer " + integer );
+                System.out.println("Consumer of type Integer " + integer);
             }
         };
 

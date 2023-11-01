@@ -7,7 +7,7 @@ public class Recursion {
 
 
     public static void recursionFunction1(int aSimpleNumber) {
-        System.out.println(String.format("Value: %d", aSimpleNumber));
+        System.out.printf("Value: %d%n", aSimpleNumber);
         recursionFunction2(aSimpleNumber - 1);
     }
 
@@ -22,12 +22,12 @@ public class Recursion {
     }
 
     public static void recursionFunction4(int aSimpleNumber) {
-        System.out.println(String.format("Value: %d", aSimpleNumber));
+        System.out.printf("Value: %d%n", aSimpleNumber);
         recursionFunction5(aSimpleNumber - 1);
     }
 
     public static void recursionFunction5(int aSimpleNumber) {
-        System.out.println(String.format("Value: %d", aSimpleNumber));
+        System.out.printf("Value: %d%n", aSimpleNumber);
     }
 
     public static void demoNaiveRecursiveFunction() {
@@ -53,7 +53,7 @@ public class Recursion {
 
         System.out.printf("Value: %d%n", aSimpleNumber);
 
-        if(aSimpleNumber - 1 == -1) //stop
+        if (aSimpleNumber - 1 == -1) //stop
             return;
 
         aRightRecursionFunction(aSimpleNumber - 1);
