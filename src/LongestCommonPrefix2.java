@@ -1,7 +1,7 @@
-class Solution {
+class LongestCommonPrefix2 {
 
     public static void main(String[] args) {
-        System.out.println(new Solution().longestCommonPrefix(new String[]{"flower", "flowerrrrrrr"}));
+        System.out.println(new LongestCommonPrefix2().longestCommonPrefix(new String[]{"flower", "flowerrrrrrr"}));
     }
 
     public String longestCommonPrefix(String[] strs) {
